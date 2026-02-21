@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Heaven Moon - Sistema</title>
+
+<style>
+body{
+    background: #0f0f0f;
+    font-family: Arial, sans-serif;
+    color: white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+/* CELULAR */
+.phone{
+    width:300px;
+    height:520px;
+    background:#1c1c1c;
+    border-radius:25px;
+    padding:20px;
+    box-shadow:0 0 25px rgba(0,0,0,0.8);
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+    align-items:center;
+}
+
+/* TELA INICIAL */
+.home{
+    width:100%;
+}
+
+.player{
+    padding:10px;
+    margin:8px 0;
+    border-radius:10px;
+    text-align:center;
+    transition:0.2s;
+}
+
+/* SOMBRA SÓ NO HOVER */
+.player:hover{
+    background:#2a2a2a;
+    box-shadow:0 0 10px rgba(255,255,255,0.2);
+    cursor:pointer;
+}
+
+/* ÍCONES */
+.apps{
+    margin-top:20px;
+    display:flex;
+    justify-content:space-around;
+    width:100%;
+}
+
+.app{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    cursor:pointer;
+}
+
+.icon{
+    width:55px;
+    height:55px;
+    border-radius:15px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:24px;
+    margin-bottom:5px;
+}
+
+/* CORES DOS APPS */
+.whatsapp{ background:#25D366; }
+.radio{ background:#4444ff; }
+
+/* TEXTO DO APP */
+.app span{
+    font-size:12px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="phone">
+
+    <!-- NOMES DOS PLAYERS -->
+    <div class="home">
+        <div class="player">Tiago</div>
+        <div class="player">Murilo</div>
+        <div class="player">???</div>
+    </div>
+
+    <!-- ÍCONES -->
+    <div class="apps">
+        <div class="app" onclick="abrirApp('whatsapp')">
+            <div class="icon whatsapp">💬</div>
+            <span>Zap</span>
+        </div>
+
+        <div class="app" onclick="abrirApp('radio')">
+            <div class="icon radio">📻</div>
+            <span>Rádio</span>
+        </div>
+    </div>
+
+</div>
+
+<script>
+function abrirApp(app){
+    if(app === 'whatsapp'){
+        alert("Abrindo mensagens...");
+        // aqui depois entra o sistema de chat multiplayer
+    }
+
+    if(app === 'radio'){
+        alert("Sintonizando rádio...");
+        // aqui depois entra o áudio da rádio do RPG
+    }
+}
+</script>
+
+</body>
+</html>
